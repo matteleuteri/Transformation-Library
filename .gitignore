@@ -1,0 +1,12 @@
+*.pdb
+*.rdbg
+*.o
+*.obj
+*.dll
+*.a
+*.lib
+*.exe
+*.svg
+build/
+shell.bat
+.vscode/
