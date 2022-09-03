@@ -7,7 +7,7 @@
 #include <profileapi.h>
 #include <filesystem>
 #include <array>
-
+#include <wincodec.h>
 #include <d2d1.h>
 #include <vector>
 #include <memory>

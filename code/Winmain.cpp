@@ -4,11 +4,11 @@ static void handleKeyDown(WPARAM wParam)
 {
     if(wParam == VK_RIGHT) 
     {
-        go->animationController->setAnimation("EXAMPLE2");
+//        go->animationController->setAnimation("EXAMPLE2");
     }
     else if(wParam == VK_LEFT) 
     {
-        go->animationController->setAnimation("EXAMPLE1");
+//        go->animationController->setAnimation("EXAMPLE1");
     }
 }
 
@@ -90,18 +90,18 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
 
             createResources(hwnd, &rc);
 
-            auto animationController = std::make_unique<AnimationController>(renderTarget, hwnd, &rc, p);
-            animationController->loadAnimation(pIWICFactory, { "run1.png", "run2.png", "run3.png", 
-                        "run4.png", "run5.png", "run4.png", "run3.png", "run2.png" },
-                        "EXAMPLE1", GetTickCount(), 100);
+//            auto animationController = std::make_unique<AnimationController>(renderTarget, hwnd, &rc, p);
+//            animationController->loadAnimation(pIWICFactory, { "run1.png", "run2.png", "run3.png", 
+//                        "run4.png", "run5.png", "run4.png", "run3.png", "run2.png" },
+//                        "EXAMPLE1", GetTickCount(), 100);
 
-            animationController->loadAnimation(pIWICFactory, { "jump1.png", "jump2.png", "jump3.png", 
-                        "jump4.png", "jump5.png", "jump6.png", "jump7.png", "jump6.png", 
-                        "jump5.png", "jump4.png", "jump3.png", "jump2.png", "jump1.png" },
-                        "EXAMPLE2", GetTickCount(), 100);
+//            animationController->loadAnimation(pIWICFactory, { "jump1.png", "jump2.png", "jump3.png", 
+//                        "jump4.png", "jump5.png", "jump6.png", "jump7.png", "jump6.png", 
+//                        "jump5.png", "jump4.png", "jump3.png", "jump2.png", "jump1.png" },
+//                        "EXAMPLE2", GetTickCount(), 100);
             
-            animationController->setAnimation("EXAMPLE1");
-            go = std::make_unique<GameObject>(animationController.get(), 200.0f, 200.0f, 0.5f);
+//            animationController->setAnimation("EXAMPLE1");
+//            go = std::make_unique<GameObject>(animationController.get(), 200.0f, 200.0f, 0.5f);
 
             int32_t startTime = GetTickCount();
             int32_t endTime;
@@ -123,7 +123,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine
                 {
                     renderTarget->BeginDraw();
                     renderTarget->Clear(D2D1::ColorF(D2D1::ColorF::Black));  
-                    go->animationController->animate(GetTickCount(), go->x, go->y);
+//                    go->animationController->animate(GetTickCount(), go->x, go->y);
                     renderTarget->EndDraw();
                     // scene->updateState(hwnd, endTime, startTime);
                     // scene->renderState(hwnd, renderTarget, pTextFormat_);                    
